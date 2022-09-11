@@ -39,6 +39,8 @@ class train_validation:
             self.log_writer.log(self.file_object,
                                 "Creating Training_Database and tables on the basis of given schema!!!")
             # create database with given name, if present open the connection! Create table with columns given in schema
+            # we are creating the table because client will give us many files for training so we will combine all the files and 
+            # store into one table and then we will import that csv file and apply model on that csv file
             self.dBOperation.createTableDb('Training', column_names)
             self.log_writer.log(self.file_object, "Table creation Completed!!")
             self.log_writer.log(self.file_object, "Insertion of Data into Table started!!!!")
