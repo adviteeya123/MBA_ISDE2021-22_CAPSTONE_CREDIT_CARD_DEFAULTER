@@ -104,3 +104,57 @@ To create version/commit all changes by git
 ```
 git commit -m "message"
 ```
+To send version/changes to github
+```
+git push origin main
+```
+
+'''
+about main.py
+it consists of 3 routes
+# homepage
+# training 
+# prediction 
+'''
+
+LOGGING OF THE FILE
+'''
+We need to login each and every step. 
+So that the support team has better ease of access of our application.
+For erroneous situation and exception.
+Easy to locate when it was failed and what time it was failed and which file caused the failure.
+
+We have use applicaiton_logging folder to log the file in which logger.py python coding is done
+
+Several ways to perform logging 
+1. Logs to a file 
+2. Logs to a database
+3. Logs to a topic ( listner and consumer will be listening) etc.
+4. Custom logging framework
+
+In this project we will be writing our own custom framework.
+'''
+
+
+VALIDATION AND TRANSFORMATION
+
+'''
+Validation: Here we have to check weather the data which have been sent to us by the client is valid or not.
+We will check our constraints and if the validation rule pass we will put the data into good raw data folder and if the constrains failed we will put it into bad raw data folder (archieved).
+
+From the good raw data folder we will put it into the database and convert it into a form of table.
+And then we will export the csv file as an input for the training data
+
+It will be a json file either given by the client or you can create by your own after discussing with the client.
+e.g. schema_training.json
+
+Various constraints taken in the project are :
+1. Length of the file
+2. Check any missing values
+3. Length of the column
+
+TRANSFORMATION:
+
+for e.g. sql does not understand the NAN values it understands the NULL values so that type of transformation has been done.
+ 
+'''
