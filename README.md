@@ -107,6 +107,10 @@ git commit -m "message"
 To send version/changes to github
 ```
 git push origin main
+
+and 
+
+git push to update the pending branch
 ```
 
 '''
@@ -165,3 +169,4 @@ DB Operation
 GOOD RAW DATA FOLDER AND BAD RAW DATA FOLDER ARE THE temporary FOLDERS JUST FOR INSERTION AND DELETION OF THE FILES
 
 '''
+
