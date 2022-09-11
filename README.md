@@ -107,6 +107,10 @@ git commit -m "message"
 To send version/changes to github
 ```
 git push origin main
+
+and 
+
+git push to update the pending branch
 ```
 
 '''
@@ -158,3 +162,11 @@ TRANSFORMATION:
 for e.g. sql does not understand the NAN values it understands the NULL values so that type of transformation has been done.
  
 '''
+
+DB Operation
+
+'''
+GOOD RAW DATA FOLDER AND BAD RAW DATA FOLDER ARE THE temporary FOLDERS JUST FOR INSERTION AND DELETION OF THE FILES
+
+'''
+
