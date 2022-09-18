@@ -3,6 +3,7 @@ from sklearn.cluster import KMeans
 from kneed import KneeLocator
 from file_operations import file_methods
 
+
 class KMeansClustering:
     """
             This class shall  be used to divide the data into clusters before training.
