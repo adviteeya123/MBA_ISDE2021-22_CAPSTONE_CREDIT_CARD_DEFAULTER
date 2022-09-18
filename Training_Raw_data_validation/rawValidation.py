@@ -72,7 +72,7 @@ class Raw_Data_validation:
 
         return LengthOfDateStampInFile, LengthOfTimeStampInFile, column_names, NumberofColumns
 
-def manualRegexCreation(self):
+    def manualRegexCreation(self):
         """
                                 Method Name: manualRegexCreation
                                 Description: This method contains a manually defined regex based on the "FileName" given in "Schema" file.

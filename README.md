@@ -89,6 +89,14 @@ OR
 git add <file_name>
 ```
 
+
+
+To install latest version of pandas 
+```
+
+```
+
+
 > Note: To ignore file or folder from git we can write name of file/folder in .gitignore file
 
 To check the git status 
@@ -111,18 +119,29 @@ git push origin main
 and 
 
 git push to update the pending branch
+
+To install latest version of pandas
+
 ```
 
-'''
+conda install pandas
+
+```
+
+
+```
+
+
+```
 about main.py
 it consists of 3 routes
 # homepage
 # training 
 # prediction 
-'''
+```
 
 LOGGING OF THE FILE
-'''
+```
 We need to login each and every step. 
 So that the support team has better ease of access of our application.
 For erroneous situation and exception.
@@ -139,12 +158,12 @@ Several ways to perform logging
 
 In this project we will be writing our own custom framework.
 
-'''
+```
 
 
 VALIDATION AND TRANSFORMATION
 
-'''
+```
 Validation: Here we have to check weather the data which have been sent to us by the client is valid or not.
 We will check our constraints and if the validation rule pass we will put the data into good raw data folder and if the constrains failed we will put it into bad raw data folder (archieved).
 
@@ -163,18 +182,18 @@ TRANSFORMATION:
 
 for e.g. sql does not understand the NAN values it understands the NULL values so that type of transformation has been done.
  
-'''
+```
 
 DB Operation
 
-'''
+```
 GOOD RAW DATA FOLDER AND BAD RAW DATA FOLDER ARE THE temporary FOLDERS JUST FOR INSERTION AND DELETION OF THE FILES
 
-'''
+```
 
 DATA PREPROCESSING:
 
-'''
+```
 Validated and Transformed data is moved to the Folder Training_FileFromDB from the database.
 We retrieve the data in the form of a csv file and then we do the preprocessing.
 Before we send the file for modeling we do the following steps in data preprocessing:
@@ -196,11 +215,11 @@ Before we send the file for modeling we do the following steps in data preproces
 8. Handle imbalance datasheet
 
 
-'''
+```
 
 CLUSTERING
 
-'''
+```
 Once the data is preprocessed and cleaned. 
 Now next step is clustering. Why clustering ?
 Support we have a data distribution and we perform a linear regression on the data and we get the one best fit line and calculate the sum of residuals on that best fit line suppose that is R1.
@@ -239,10 +258,10 @@ where n is the optimum number of clusters.
 
 And then we will apply the machine learning models on the groups and do the hypertuning of the models so that we can get the best ML models
 
-'''
+```
 MODEL SELECTION AND MODEL TUNING
 
-'''
+```
 As this is the classification model we can either go any clssification models from the market.
 like: 
 Various classification models are: 
@@ -258,4 +277,4 @@ etc.
 
 But we have taken 
 
-'''
+```
