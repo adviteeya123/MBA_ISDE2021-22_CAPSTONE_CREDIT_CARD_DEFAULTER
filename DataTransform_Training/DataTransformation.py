@@ -28,7 +28,7 @@ class dataTransform:
                                                         keep only "Integer" data for ease up the loading.
                                                         This column is anyways going to be removed during training.
 
-                                            Written By: iNeuron Intelligence
+                                            Written By: GROUP 7 MBA_ISDE_COFORGE_2020-23 BATCH
                                            Version: 1.0
                                            Revisions: None
 
