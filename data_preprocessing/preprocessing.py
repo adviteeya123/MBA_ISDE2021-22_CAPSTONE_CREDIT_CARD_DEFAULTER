@@ -136,7 +136,7 @@ class Preprocessor:
                                         Output: A Dataframe which has all the missing values imputed.
                                         On Failure: Raise Exception
 
-                                        Written By: iNeuron Intelligence
+                                        Written By:  GROUP 7 MBA_ISDE_COFORGE_2020-23 BATCH
                                         Version: 1.0
                                         Revisions: None
                      """
