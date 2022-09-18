@@ -41,10 +41,46 @@ CORS(app)
 def home():
     return render_template('index.html')
 
+@app.route("/predict", methods=['POST'])
+@cross_origin()
+def predictRouteClient():
+    try:
+        if request.json is not None:
+            path = request.json['filepath']
+
+            pred_val = pred_validation(path) #object initialization
+
+            pred_val.prediction_validation() #calling the prediction_validation function
+
+            pred = prediction(path) #object initialization
+
+            # predicting for dataset present in database
+            path = pred.predictionFromModel()
+            return Response("Prediction File created at %s!!!" % path)
+        elif request.form is not None:
+            path = request.form['filepath']
+
+            pred_val = pred_validation(path) #object initialization
+
+            pred_val.prediction_validation() #calling the prediction_validation function
+
+            pred = prediction(path) #object initialization
+
+            # predicting for dataset present in database
+            path = pred.predictionFromModel()
+            return Response("Prediction File created at %s!!!" % path)
+
+    except ValueError:
+        return Response("Error Occurred! %s" %ValueError)
+    except KeyError:
+        return Response("Error Occurred! %s" %KeyError)
+    except Exception as e:
+        return Response("Error Occurred! %s" %e)
 
 
 
-@app.route("/", methods = ['POST'])
+
+@app.route("/train", methods = ['POST'])
 @cross_origin()
 def trainRouteClient():
 
@@ -61,8 +97,9 @@ def trainRouteClient():
             train_valObj.train_validation()#calling the training_validation function
 
             # MODEL TRAINING 
-            trainModelObj = trainModel() #object initialization
-            trainModelObj.trainingModel() #training the model for the files in the table
+            trainModelObj = trainModel() #object initialization # trainModel is a class
+            trainModelObj.trainingModel() #training the model for the files in the table # trainingModel is a method from the class trainModel
+
 
 
     except ValueError:
