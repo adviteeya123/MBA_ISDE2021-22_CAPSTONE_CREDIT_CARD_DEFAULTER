@@ -3,7 +3,7 @@ To build a classification methodology to determine whether a person defaults the
 
 ## Start CAPSTONE - ML - PROJECT 
 
-We will build a machile learning project and deploy to cloud environment. 
+We will build a machine learning project and deploy to cloud environment. 
 We will get an API and we will do the predictions.
 Different sections in the project
 
@@ -130,13 +130,15 @@ Easy to locate when it was failed and what time it was failed and which file cau
 
 We have use applicaiton_logging folder to log the file in which logger.py python coding is done
 
+
 Several ways to perform logging 
-1. Logs to a file 
-2. Logs to a database
-3. Logs to a topic ( listner and consumer will be listening) etc.
-4. Custom logging framework
+# 1. Logs to a file 
+# 2. Logs to a database
+# 3. Logs to a topic ( listner and consumer will be listening) etc.
+# 4. Custom logging framework
 
 In this project we will be writing our own custom framework.
+
 '''
 
 
@@ -170,3 +172,90 @@ GOOD RAW DATA FOLDER AND BAD RAW DATA FOLDER ARE THE temporary FOLDERS JUST FOR 
 
 '''
 
+DATA PREPROCESSING:
+
+'''
+Validated and Transformed data is moved to the Folder Training_FileFromDB from the database.
+We retrieve the data in the form of a csv file and then we do the preprocessing.
+Before we send the file for modeling we do the following steps in data preprocessing:
+
+1. Remove unwanted space from the file
+
+2. Remove columns
+
+3. Separate label features
+
+4. Check for null presence
+
+5. Missing value imputation 
+
+6. Scaling
+
+7. Encode categorical columns
+
+8. Handle imbalance datasheet
+
+
+'''
+
+CLUSTERING
+
+'''
+Once the data is preprocessed and cleaned. 
+Now next step is clustering. Why clustering ?
+Support we have a data distribution and we perform a linear regression on the data and we get the one best fit line and calculate the sum of residuals on that best fit line suppose that is R1.
+
+Now if we divide the same data into clusters and perform linear regression on that data with multiple best fit lines in the distributed data and then caluclate the value of sum of residuals e.g. R2+R3+...+Rn = Rd.
+
+So the value of Rd < R1 .
+
+So the less value of the residuals better is the performance after we apply machine learning models on each clusters.
+
+
+NOW WHICH CLUSTERING APPROACH TO FOLLOW?
+
+We will be using the k means clustering. 
+And in order to get the best value of k there are two methds:
+
+a. Elbow method.
+
+b. Kneed library. 
+
+
+After we get the optimum no. of clusters. 
+
+We have to create those clusters. Separate columns will be created for the clusters.
+
+And then we have to label those columns in group.
+
+cluster 0 = group 0
+cluster 1 = group 1 
+cluster 2 = group 2 
+.
+.
+.
+cluster n = group n 
+where n is the optimum number of clusters. 
+
+And then we will apply the machine learning models on the groups and do the hypertuning of the models so that we can get the best ML models
+
+'''
+MODEL SELECTION AND MODEL TUNING
+
+'''
+As this is the classification model we can either go any clssification models from the market.
+like: 
+Various classification models are: 
+
+1. Logistic regression.
+2. Decision tress.
+3. Random Forest
+4. SVM
+5. Naive Bayes
+6. KNN
+7. XG Boost
+etc. 
+
+But we have taken 
+
+'''
