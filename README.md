@@ -275,6 +275,6 @@ Various classification models are:
 7. XG Boost
 etc. 
 
-But we have taken 
+
 
 ```
